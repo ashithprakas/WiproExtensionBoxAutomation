@@ -1,9 +1,9 @@
 import win32com.client
-from target_device_reader import TargetDeviceReader
+from config_json_reader import ConfigJsonReader
 
 class WindowsHelpers:
     def __init__(self) :
-        self.__target_device_instance = TargetDeviceReader().get_instance_from_config()
+        self.__target_device_instance = ConfigJsonReader().get_usb_instance_ID()
 
     def _matches_target_device(self,device_id):
         if device_id == self.__target_device_instance:
