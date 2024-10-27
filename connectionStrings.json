@@ -1,11 +1,8 @@
 {
-    "USB_DEVICE_INSTANCE_ID": "USB\\VID_0781&PID_5567\\03021113102723125403",
-
-    "CONTROL_DEVICE_ID":"d71f419d65f3734435stos",
-    "ACCESS_ID" : "3tj74uymdsc5c38hpg8n",
-    "ACCESS_KEY" : "1a2c3599108740a7a11a601875bd5e02",
-
-    "USERNAME":"ashith8129@gmail.com",
-    "PASSWORD" :"ashith@8129"
-
+    "USB_DEVICE_INSTANCE_ID": "Instance id of device eg: USB\\VID_0000&PID_000\\00000000000000000000", 
+    "CONTROL_DEVICE_ID":"Wipro_extension_device_id",
+    "ACCESS_ID" : "Tuya_cloud_platform_access_id",
+    "ACCESS_KEY" : "Tuya_cloud_platform_access_key",
+    "USERNAME":"App username connected to Tuya (smart life)",
+    "PASSWORD" :"App password connected to Tuya (smart life)"
 }
