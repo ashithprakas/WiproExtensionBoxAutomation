@@ -1,27 +1,19 @@
 {
-    "WorkPreset":{
-        "commands": [
+    "PresetName1":{
+       "commands": [
             {"code":"switch_1","value": true},
             {"code":"switch_2","value":true},
-            {"code":"switch_3","value":false},
-            {"code":"switch_4","value":false}
-        ]
-    },
-    "HomePreset":{
-        "commands": [
-            {"code":"switch_1","value":true},
-            {"code":"switch_2","value":false},
             {"code":"switch_3","value":true},
-            {"code":"switch_4","value":false}
+            {"code":"switch_4","value":true}
         ]
     },
-    "Default":{
-        "commands":[
-            {"code":"switch_1","value":false},
-            {"code":"switch_2","value":false},
-            {"code":"switch_3","value":false},
-            {"code":"switch_4","value":false}
+    "PresetName2":{
+       "commands": [
+            {"code":"switch_1","value": true},
+            {"code":"switch_2","value":true},
+            {"code":"switch_3","value":true},
+            {"code":"switch_4","value":true}
         ]
     },
-    "SelectedPreset":"HomePreset"
+    "SelectedPreset":"PresetName1/PresetName2"
 }
