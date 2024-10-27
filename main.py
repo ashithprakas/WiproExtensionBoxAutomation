@@ -14,7 +14,7 @@ class App :
 
     def initalize_listeners(self):
         deviceHelper = None
-        if self.__os_type == OSType.WINDOWScls:
+        if self.__os_type == OSType.WINDOWS:
             deviceHelper = WindowsHelpers()
             deviceHelper.listen_for_usb_events()
         elif self.__os_type == OSType.LINUX:

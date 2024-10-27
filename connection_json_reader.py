@@ -1,8 +1,8 @@
 import json
 
-class ConfigJsonReader:
+class ConnectionStringsJson:
     def __init__(self):
-        with open('TargetDevice.json', 'r') as file:
+        with open('connectionStrings.json', 'r') as file:
             self._data = json.load(file)
 
     def get_usb_instance_ID(self):
