@@ -1,21 +1,21 @@
 import win32com.client
-from TargetDeviceReader import TargetDeviceReader
+from target_device_reader import TargetDeviceReader
 
-class WindowsDeviceFinder:
+class WindowsHelpers:
     def __init__(self) :
         self.__target_device_instance = TargetDeviceReader().get_instance_from_config()
 
-    def matches_target_device(self,device_id):
+    def _matches_target_device(self,device_id):
         if device_id == self.__target_device_instance:
             return True
         return False
     
-    def OnDeviceChangeEvent(self, event_type, device_id):
+    def on_device_change_event(self, event_type, device_id):
         if event_type == 2:
-            if self.matches_target_device(device_id):
+            if self._matches_target_device(device_id):
                 print(f"USB device connected: {device_id}")
         elif event_type == 3:
-            if self.matches_target_device(device_id):
+            if self._matches_target_device(device_id):
                 print(f"USB device disconnected: {device_id}")
 
     def listen_for_usb_events(self):
@@ -32,9 +32,6 @@ class WindowsDeviceFinder:
             event_type = event.Path_.Class
 
             if "InstanceCreationEvent" in event_type:
-                self.OnDeviceChangeEvent(2, device_id)
+                self.on_device_change_event(2, device_id)
             elif "InstanceDeletionEvent" in event_type:
-                self.OnDeviceChangeEvent(3, device_id)
-
-obj = WindowsDeviceFinder()
-obj.listen_for_usb_events()
+                self.on_device_change_event(3, device_id)
