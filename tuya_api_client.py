@@ -1,7 +1,7 @@
 from tuya_iot import TuyaOpenAPI
 from requests import get
-from connection_json_reader import ConnectionStringsJson
-from configuration_json_reader import ConfigurationJson
+from ReaderHelpers.connection_json_reader import ConnectionStringsJson
+from ReaderHelpers.configuration_json_reader import ConfigurationJson
 
 class TuyaAPIClient:
     def __init__(self) -> None:
@@ -19,7 +19,6 @@ class TuyaAPIClient:
     def set_device_preset(self):
  
         response = self.openApi.post(f"/v1.0/iot-03/devices/{self.__connectionData.get_control_device_ID()}/commands",self.__configurations.get_preset_commands())
-        print(response)
 
     def clear_device_presets(self):
         response = self.openApi.post(f"/v1.0/iot-03/devices/{self.__connectionData.get_control_device_ID()}/commands",self.__configurations.get_default_commands())

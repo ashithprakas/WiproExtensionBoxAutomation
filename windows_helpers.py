@@ -1,5 +1,5 @@
 import win32com.client
-from connection_json_reader import ConnectionStringsJson
+from ReaderHelpers.connection_json_reader import ConnectionStringsJson
 from tuya_api_client import TuyaAPIClient
 
 class WindowsHelpers:
